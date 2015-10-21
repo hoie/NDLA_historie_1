@@ -5,6 +5,7 @@
 $primary-color: #9AD5CF;
 $link-color: #ccc;
 $link-height: 4px;
+$link-arrowhead: 16px;
 
 html {
 	height: 100%;
@@ -99,6 +100,7 @@ button {
 	color: #fff;
 	padding: 40px 10px 70px;
 	border: 3px solid $link-color;
+	border-radius: 10px;
 	text-align: center;
 	background-size: 100%;
 	background-size: cover;
@@ -438,11 +440,10 @@ button {
 		position: absolute;
 		height: 0;
 		width: 0;
-		border: 6px solid transparent;
-		border-left: 6px solid #222;
-		right: -10px;
-		top: -3px;
+		border: $link-arrowhead solid transparent;
 		border-left: $link-arrowhead solid $link-color;
+		right: -20px;
+		top: -15px;
 		opacity: 1;
 	}
 	.link-note {
@@ -452,8 +453,8 @@ button {
 		left: 50% !important;
 		margin-left: -15px;
 		margin-top: -15px;
-		height: 30px;
-		width: 30px;
+		height: 50px;
+		width: 50px;
 		-webkit-transition: all .5s ease-in-out;
 		transition: all .5s ease-in-out;
 	}
@@ -484,22 +485,22 @@ button {
 		position: absolute;
 		height: 0;
 		width: 0;
-		border: 6px solid transparent;
-		border-top: 6px solid #222;
-		right: -3px;
-		bottom: -11px;
+		border: $link-arrowhead solid transparent;
 		border-top: $link-arrowhead solid $link-color;
+		right: -30px;
+		top: -17px;
 	}
 	.link .edit {
 		position: absolute;
 		left: 50%;
-		margin-left: -10px;
+		margin-left: -25px;
 		top: 50%;
-		margin-top: -10px;
-		width: 20px;
-		height: 20px;
+		margin-top: -25px;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
 		padding: 0;
-		line-height: 20px;
+		line-height: 30px;
 		text-align: center;
 		visibility: visible;
 	}

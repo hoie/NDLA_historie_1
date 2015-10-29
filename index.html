@@ -101,7 +101,9 @@
 </header>
 <section id="container" class="container grid_full">
 	<div class="n1 node nodePlaceholder">
-		<div id='l1' class='link l1'>
+		<div id='l1' class='link link-double-h l1'>
+		<div class="arrow arrow-left"></div>
+		<div class="arrow arrow-right"></div>
 			<div class="link-note">
 				<h2 id='l1title'>Oppgjøret etter 1VK &rarr; Tysk ekspansjon</h2>
 				<button class="edit" onclick="showLinkNote('l1');">&#9998;</button>
@@ -112,6 +114,7 @@
 			</div>
 		</div>
 		<div id='l2' class='link l2'>
+		<div class="arrow arrow-right"></div>
 			<div class="link-note">
 				<h2 id='l2title'>Oppgjøret etter 1VK &rarr; Ekstreme ideologier</h2>
 				<div id='l2url' class="node-url">url</div>
@@ -121,7 +124,9 @@
 				<button class="close" onclick="hideLinkNote('l2');">&#215;</button>
 			</div>
 		</div>
-		<div id='l3' class='link l3'>
+		<div id='l3' class='link l3 link-double-v'>
+			<div class="arrow arrow-down"></div>
+			<div class="arrow arrow-up"></div>
 			<div class="link-note">
 				<h2 id='l3title'>Oppgjøret etter 1VK &rarr; Økonomisk krise</h2>
 				<h3 id='l3subtitle'></h3>
@@ -152,7 +157,9 @@
 	</div>
 	
 	<div class="n3 node nodePlaceholder">
-		<div id='l4' class='link l4 double-arrow'>
+		<div id='l4' class='link link-double-v l4'>
+			<div class="arrow arrow-down"></div>
+			<div class="arrow arrow-up"></div>
 			<div class="link-note">
 				<h2 id='l4title'>Tysk ekspansjon &harr; Appeasment</h2>
 				<h3 id='l4subtitle'></h3>
@@ -172,6 +179,16 @@
 				<button class="close" onclick="hideLinkNote('l5');">&#215;</button>
 			</div>
 		</div>
+		<div class="link-note">
+			<h2 id='l5title'>Tysk ekspansjon &rarr; Andre verdenskrig</h2>
+			<h3 id='l5subtitle'></h3>
+			<div id='l5url' class="node-url">url</div>
+			<button class="edit" onclick="showLinkNote('l5');">&#9998;</button>
+			<textarea placeholder="Skriv ditt notat her..." id='l5n'></textarea>
+			<button class="close" onclick="hideLinkNote('l5');">&#215;</button>
+		</div>
+		</div>
+
 	</div>
 	<div id='n3' class='node n3' onclick="showNodeNote('n3');" style="background-image: url(img/szf7d74c_Berliner_VerlagArchiv_DPA_NTBscanpix.jpg);">
 		<h2 id='n3title'>Tysk ekspansjon</h2>
@@ -183,7 +200,9 @@
 	</div>
 
 	<div class="n4 node nodePlaceholder">
-		<div id='l6' class='link l6'>
+		<div id='l6' class='link link-double-v l6'>
+			<div class="arrow arrow-down"></div>
+			<div class="arrow arrow-up"></div>
 			<div class="link-note">	
 				<h2 id='l6title'>Ekstreme ideologier &rarr; Tysk ekspansjon</h2>
 				<h3 id='l6subtitle'></h3>
@@ -205,6 +224,7 @@
 
 	<div class="n5 node nodePlaceholder">
 		<div id='l7' class='link l7'>
+			<div class="arrow arrow-up"></div>
 			<div class="link-note">
 				<h2 id='l7title'>Økonomisk krise &rarr; Ekstreme ideologier</h2>
 				<h3 id='l7subtitle'></h3>
@@ -213,6 +233,8 @@
 				<textarea placeholder="Skriv ditt notat her..." id='l7n'></textarea>
 				<button class="close" onclick="hideLinkNote('l7');">&#215;</button>
 			</div>
+		</div>
+		<p><i class="fa fa-arrow-left fa-2x"></i><i class="fa fa-arrow-right fa-2x"></i></p>
 		</div>
 	</div>
 	<div id='n5' class='node n5' onclick="showNodeNote('n5');" style="background-image: url(img/sz9012c0_Mary_Evans_Picture_NTBscanpix_crop.jpg);">
@@ -270,9 +292,9 @@
 	
 	<div class="n8 node nodePlaceholder"></div>
 	<div id='n8' class='node n8' onclick="showNodeNote('n8');"  style="background-image: url(img/sz83e327_Topfoto_NTBscanpix_crop.jpg);">
-		<h2 id='n8title'>Avkolonisering</h2>
-		<h3 id='n8subtitle'>Avkolonisering</h3>
-		<div id='n8url'>url</div>
+		<h2 id='n8title'></h2>
+		<h3 id='n8subtitle'></h3>
+		<div id='n8url'></div>
 		<button class="edit" onclick="showNodeNote('n8');">&#9998;</button>	
 		<textarea placeholder="Skriv ditt notat her..." id='n8n'></textarea>
 		<button class="close" onclick="hideNodeNote('n8');">&#215;</button>
@@ -293,7 +315,7 @@
 	var n5 = NDLAHistoryMindMap.createNode("Økonomisk krise", "Foto: Mary Evans Picture / NTB Scanpix","","n5");
 	var n6 = NDLAHistoryMindMap.createNode("Andre verdenskrig", "Foto: AKG Images / NTB Scanpix","","n6");
 	var n7 = NDLAHistoryMindMap.createNode("Den kalde krigen", "Foto: Mimsy Møller samfoto / NTB Scanpix","","n7");
-	var n8 = NDLAHistoryMindMap.createNode("Avkolonisering", "Foto: Topfoto / NTB Scanpix","","n8");
+	var n8 = NDLAHistoryMindMap.createNode("Nykolonalisering", "Foto: Topfoto / NTB Scanpix","","n8");
 	var l1 = NDLAHistoryMindMap.createLink(n1,n3, false, "", "", "l1");
 	var l2 = NDLAHistoryMindMap.createLink(n1,n4, false, "", "", "l2");
 	var l3 = NDLAHistoryMindMap.createLink(n1,n5, false, "", "", "l3");

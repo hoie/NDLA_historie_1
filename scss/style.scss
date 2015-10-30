@@ -48,7 +48,6 @@ button {
 	display: inline-block;
 	overflow: hidden;
 	background-color: $primary-color;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 #header {
@@ -446,6 +445,7 @@ button {
 		line-height: 30px;
 		text-align: center;
 		visibility: visible;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);	
 	}
 	.link.active .edit {
 		opacity: 0;

@@ -46,6 +46,7 @@ button {
 	outline: none;
 	cursor: pointer;
 	display: inline-block;
+	overflow: hidden;
 	background-color: $primary-color;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -250,8 +251,12 @@ button {
 		line-height: 22px;
 	}
 	.hasNote .edit:before {
-		content: '\2713';
-		padding-right: 20px;
+		padding-right: 30px;
+		font-family: FontAwesome;
+	    content: "\f00c";
+	    display: inline-block;
+	    padding-right: 2px;
+	    // vertical-align: middle;		
 	}
 
 	.node textarea {
@@ -441,7 +446,6 @@ button {
 		line-height: 30px;
 		text-align: center;
 		visibility: visible;
-		overflow: hidden;
 	}
 	.link.active .edit {
 		opacity: 0;

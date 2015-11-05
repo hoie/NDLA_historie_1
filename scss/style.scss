@@ -3,12 +3,13 @@
 @import 'grid';
 @import 'reset';
 
-$primary-color: #9AD5CF;
+// $primary-color: #9AD5CF;
+$primary-color: orange;
 $tint-color: rgb(0,0,100);
 $link-color: #ccc;
 $link-height: 3px;
-$link-arrowhead: 14px;
-$link-arrow-offset: -13px;
+$link-arrowhead: 8px;
+$link-arrow-offset: -4px;
 
 
 html {
@@ -269,6 +270,7 @@ button {
 	}
 	.node .close {
 		opacity: 0;
+		background: $link-color;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -298,21 +300,14 @@ button {
 .link {
 	position: absolute;
 	left: 100%;
-	top: 50%;
-	width: 55%;
-	height: $link-height;
+	// top: 50%;
+	// width: 55%;
+	// height: $link-height;
 	background: $link-color;
 	color: #222;
 	z-index: 0;
 }
-.link-double-h {
-	left: 105%;
-	width: 50%;
-}
-.link-double-v {
-	top: -30%;
-	height: 25%;
-}
+
 
 	@media only screen and (min-width: 1200px) { 
 		.link {
@@ -336,16 +331,10 @@ button {
 			}
 		}
 		.n1 .l3 {
-			top: 100%;
+			top: 113%;
 			width: $link-height;
 			left: 80%;
-			height: 92%;
-	    }
-	    .n1 .l3:after {
-			border-color: transparent;
-			border-top: 6px solid #222;
-			top: 100%;
-			right: -3px;
+			height: 100%;
 	    }
 
 	.n2 {
@@ -359,11 +348,12 @@ button {
 		.n3 .l4 {
 			width: $link-height;
 			left: 50%;
+			top: -40%;
 	    }
 
 	.n4 {
 		left: 27%;
-		top: 53%;
+		top: 52%;
 	}
 		.n4 .l6 {
 			width: $link-height;
@@ -379,6 +369,7 @@ button {
 		.n5 .l7 {
 			width: $link-height;
 			left: 85%;
+			top: -40%;
 	    }
 
 	.n6 {
@@ -442,12 +433,18 @@ button {
 		width: 30px;
 		height: 30px;
         border-radius: 100%;
+        background: $link-color;
 		padding: 0;
 		line-height: 30px;
 		text-align: center;
 		visibility: visible;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);	
 	}
+	.link .edit:hover {
+		background: $primary-color;
+	}
+
+
 	.link.active .edit {
 		opacity: 0;
 		pointer-events: none;
@@ -605,31 +602,78 @@ button {
     }
 }
 
-.arrow {
-	position: absolute;
-	height: 0;
-	width: 0;
-	border: $link-arrowhead solid transparent;
-	opacity: 1;	
+.link-h {
+  // position: absolute;
+  // width: 40%;
+  // left: 100%;
+  // top: 20%;
+  height: $link-height;
+  // background: $link-color;
+  // z-index: 1;
 }
 
-.arrow-right {
-	border-left: $link-arrowhead solid $link-color;
-	right: -20px;
-	top: $link-arrow-offset;
+.link-h.double:before,
+.link-h.left:before{
+  content: "";
+  position: absolute;
+  top: $link-arrow-offset;
+  left: 0;
+  width: $link-arrowhead;
+  height: $link-arrowhead;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  border-color: $link-color;
+  transform: rotate(135deg);
 }
-.arrow-left {
-	border-right: $link-arrowhead solid $link-color;
-	left: -20px;
-	top: $link-arrow-offset;	
+
+.link-h.double:after,
+.link-h.right:after{
+  content: "";
+  position: absolute;
+  top: $link-arrow-offset;
+  right: 0;
+  width: $link-arrowhead;
+  height: $link-arrowhead;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  border-color: $link-color;
+  transform: rotate(-45deg);
 }
-.arrow-down {
-	border-top: $link-arrowhead solid $link-color;
-	left: $link-arrow-offset;
-	bottom: -20px;
+
+.link-v {
+  // position: absolute;
+  height: 40%;
+  // left: 20%;
+  // top: 100%;
+  width: $link-height;
+  // background: $link-color;
+  // z-index: 1;
 }
-.arrow-up {
-	border-bottom: $link-arrowhead solid $link-color;
-	left: $link-arrow-offset;
-	top: -20px;
+
+.link-v.double:before,
+.link-v.up:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: $link-arrow-offset;
+  width: $link-arrowhead;
+  height: $link-arrowhead;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  border-color: $link-color;
+  transform: rotate(225deg);
+}
+
+.link-v.double:after,
+.link-v.down:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: $link-arrow-offset;
+  width: $link-arrowhead;
+  height: $link-arrowhead;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  border-color: $link-color;
+  transform: rotate(45deg);
 }

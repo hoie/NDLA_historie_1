@@ -33,9 +33,7 @@
 .node:before {
 	content: '';
 	position: absolute;
-	background: $secondary-color;
-	opacity: 0.3;
-	// mix-blend-mode: darken;
+	background: $node-color;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -44,8 +42,7 @@
 }
 
 .node.active:before {
-	background: $secondary-color;
-	opacity: 0.8;
+	background: $node-color;
 }
 
 .node.nodePlaceholder{
@@ -109,7 +106,7 @@
 	line-height: $editbutton-size * 0.9;
 	font-size: $editbutton-fontsize;
 	padding: 0;
-	border: 1px solid white;
+	border: 2px solid white;
 	@media (max-width: $small-screen) {
 		height: $editbutton-size-small;
 		width: $editbutton-size-small;
@@ -119,7 +116,7 @@
 		line-height: $editbutton-fontsize-small * 1.4 !important;
 		font-size: $editbutton-fontsize-small !important;
 	}
-	background-color: $accent-color;
+	background-color: $button-color;
 	left: 50%;
 	top: 50%;
 	transition: all .3s ease-in-out;

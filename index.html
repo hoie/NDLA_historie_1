@@ -223,6 +223,27 @@
 				<button class="close" onclick="hideLinkNote('l6');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
+		<div id='l13' class='link l13 link-v up'>
+			<div class="link-note">
+				<h2 id='l13title'></h2>
+				<h3 id='l13subtitle'></h3>
+				<div id='l13url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l13');"><i class="fa fa-pencil"></i></button>
+				<textarea placeholder="Skriv ditt notat her..." id='l13n'></textarea>
+				<button class="close" onclick="hideLinkNote('l13');"><i class="fa fa-times"></i></button>
+			</div>
+		</div>
+		<div id='l14' class='link l14 link-v down'>
+			<div class="link-note">
+				<h2 id='l14title'></h2>
+				<h3 id='l14subtitle'></h3>
+				<div id='l14url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l14');"><i class="fa fa-pencil"></i></button>
+				<textarea placeholder="Skriv ditt notat her..." id='l14n'></textarea>
+				<button class="close" onclick="hideLinkNote('l14');"><i class="fa fa-times"></i></button>
+			</div>
+		</div>
+
 	</div>
 
 	<div id='n3' class='node n3' onclick="showNodeNote('n3');" style="background-image: url(img/sz9012c0_Mary_Evans_Picture_NTBscanpix_crop.jpg);">
@@ -448,6 +469,8 @@
 	var l10 = NDLAHistoryMindMap.createLink(n6,n8, false, "", "", "l10");
 	var l11 = NDLAHistoryMindMap.createLink(n6,n9, false, "", "", "l11");
 	var l12 = NDLAHistoryMindMap.createLink(n6,n10, false, "", "", "l12");
+	var l13 = NDLAHistoryMindMap.createLink(n3,n2, false, "", "", "l13");
+	var l14 = NDLAHistoryMindMap.createLink(n3,n4, false, "", "", "l14");
 	NDLAHistoryMindMap.updateNodes();
 	NDLAHistoryMindMap.updateLinks();
 	</script>
